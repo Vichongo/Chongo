@@ -1,7 +1,29 @@
 ---
-title: "Analisis"
+title: "Análisis"
 author: "Vicente Navia Castro"
 date: "2023-08-24"
 output: html_document
 ---
+## Buscamos dento del siguiente url [https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-08-18/plants.csv]
+```{r}
+library(readr)
+library(dplyr)
+library(tidyverse)
+Plantas <- read.csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-08-18/plants.csv")
+```
+
+```{r}
+Plantas_extintas_Chile <- Plantas |>
+  filter(country == "Chile")|>
+  select(binomial_name,country,continent)
+print(Plantas_extintas_Chile)
+```
+
+```{r}
+Plantas_extintas_sudamerica <- Plantas |>
+  filter(continent == "South America")|>
+  select(binomial_name,country,continent)
+print(Plantas_extintas_sudamerica)
+```
+
 
