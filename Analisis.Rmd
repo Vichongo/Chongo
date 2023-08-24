@@ -1,0 +1,7 @@
+---
+title: "Analisis"
+author: "Vicente Navia Castro"
+date: "2023-08-24"
+output: html_document
+---
+
